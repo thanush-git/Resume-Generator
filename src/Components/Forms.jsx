@@ -1,39 +1,18 @@
-import TextField from "@mui/material/TextField";
-import Button from '@mui/material/Button';
+import Personal from "./Personal";
+import Education from "./Education";
+import Experience from "./Experience";
+import Project from "./Projects";
 import "../forms.css";
+import { useState } from "react";
 
-function Forms() {
+  function Forms(){
   return (
-    <div className="formsContainer">
-      <h1>Personal Information</h1>
-      <div className="names">
-        <TextField id="firstName" label="First Name" variant="standard" />
-        <TextField id="standard-basic" label="Last Name" variant="standard" />
-      </div>
-      <div className="profile">
-        <div>
-          <TextField
-            id="outlined-basic"
-            label="Phone Number"
-            variant="outlined"
-          />
-          <TextField id="outlined-basic" label="Email" variant="outlined" />
-        </div>
-        <div>
-          <TextField id="outlined-basic" label="LinkedIn" variant="outlined" />
-          <TextField
-            id="outlined-basic"
-            label="Portfolio Link"
-            placeholder="GitHub Profile"
-            variant="outlined"
-          />
-        </div>
-      </div>
-       <div>
-          <Button variant="contained">Save</Button>
-          <Button variant="outlined">Edit</Button>
-        </div>
-    </div>
+    <>
+    <Personal/>
+    <Education />
+    <Experience />
+    <Project />
+    </>
   );
 }
 
