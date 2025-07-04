@@ -18,13 +18,14 @@ function ExperienceItem({ data, index, onChange, editFlag }) {
 
   const handleChangeCheckbox = () => {
     setChecked(true);
-
+    handleChange("endDate")(null);
     if(isChecked){
         setChecked(false);
     }
   };
+
   return (
-    <>
+    <div>
       <TextField
         label="Role"
         value={data.role}
@@ -56,7 +57,6 @@ function ExperienceItem({ data, index, onChange, editFlag }) {
   control={
     <Checkbox
       onChange={handleChangeCheckbox}
-      inputProps={{ "aria-label": "Ongoing?" }}
     />
   }
   label="Ongoing?"
@@ -80,21 +80,20 @@ function ExperienceItem({ data, index, onChange, editFlag }) {
         value = {data.desc}
         onChange={handleChange("desc")}
       />
-    </>
+    </div>
   );
 }
 
-function Experience() {
+function Experience({expList,setExpList}) {
+
   const newObj = {
     role: "",
     org: "",
     place: "",
     startDate: null,
     endDate: null,
-    desc: ""
+    desc: "",
   };
-
-  const [expList, setExpList] = useState([newObj]);
 
   let [locked, setLock] = useState(false);
 

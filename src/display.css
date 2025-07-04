@@ -1,0 +1,73 @@
+.display{
+    background-color: gray;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumeContainer{
+    width: 35vw;
+    height: 50vw;
+    display: flex;
+}
+
+.resume{
+    flex-grow: 1;
+    background-color: white;
+    padding: 30px 50px;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.names{
+    font-size: 14px;
+    text-align: center;
+}
+
+#fullName{
+    margin: 0;
+}
+.personalDeets{
+    text-align: center;
+}
+
+#edTitle{
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.edName{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.edName h3,p{
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.startEd{
+    display: flex;
+    justify-content: space-between;
+}
+
+.edDates{
+    display: flex;
+}
+
+.projectsLine{
+    display: flex;
+    justify-content: space-between;
+}
+
+#projTitle{
+    margin-top: 0;
+}
+
+.projDates{
+    display: flex;
+}

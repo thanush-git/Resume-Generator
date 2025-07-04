@@ -1,11 +1,18 @@
-.Container{
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
 }
 
-.Container{
+.form{
+    width: 40vw;
+    overflow: scroll;
+    padding: 30px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    gap: 30px;
+    overflow: hidden;
 }

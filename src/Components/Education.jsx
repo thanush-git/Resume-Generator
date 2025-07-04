@@ -14,8 +14,7 @@ function EducationItem({data, index, onChange, editFlag}) {
 };
 
   return (
-
-    <>
+    <div>
       <TextField
         label="University"
         value={data.university}
@@ -52,23 +51,19 @@ function EducationItem({data, index, onChange, editFlag}) {
         slotProps={{ textField: { variant: "outlined" } }}
         disabled = {editFlag}
       />
-    </>
+    </div>
   );
 }
 
-function Education() {
+function Education({edList, setEdList}) {
 
-  const newObj = {
-    university : "",
-    place : "",
-    course : "",
-    startDate : null,
-    endDate : null
-  }
-
-  const [edList, setEdList] = useState([
-    newObj
-  ]);
+    const newObj = {
+    university: "",
+    place: "",
+    course: "",
+    startDate: null,
+    endDate: null,
+  };
 
   let [locked, setLock] = useState(false);
 

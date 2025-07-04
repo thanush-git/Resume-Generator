@@ -24,7 +24,7 @@ function ProjectItem({ data, index, onChange, editFlag }) {
     }
   };
   return (
-    <>
+    <div>
       <TextField
         label="Title"
         value={data.title}
@@ -73,20 +73,19 @@ function ProjectItem({ data, index, onChange, editFlag }) {
         value={data.desc}
         onChange={handleChange("desc")}
       />
-    </>
+    </div>
   );
 }
 
-function Project() {
-  const newObj = {
+function Project({ projList, setProjList }) {
+
+   const newObj = {
     title: "",
     tech: "",
     startDate: null,
     endDate: null,
     desc: "",
   };
-
-  const [projList, setProjList] = useState([newObj]);
 
   let [locked, setLock] = useState(false);
 
